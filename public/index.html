@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Scraping With Mongoose</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+  <style>
+    #wrapper {
+      width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 5%;
+    }
+
+    #articles {
+      display: inline-block;
+      overflow: auto;
+      width: 60%;
+      height: 700px;
+    }
+
+    #notes {
+      float: right;
+      width: 30%;
+    }
+
+    textarea,
+    input {
+      display: block;
+      width: 100%;
+      background-color: #FCF5C7;
+    }
+
+    input {
+      height: 36px;
+      font-size: 24px;
+    }
+
+    textarea {
+      height: 200px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+      <div class="jumbotron">
+          <h1 class="display-4">Article Scraper</h1>
+          <p class="lead">A scraper for pulling articles from The Harvard Business Review site.</p>
+          <hr class="my-4">
+          <a class="btn btn-primary btn-lg" id = "scrape "role="button">Grab the Articles!</a>
+          <a class="btn btn-success btn-lg" id = "favorites" role="button">Show only your favorites</a>
+          <a class="btn btn-danger btn-lg" id = "delete" role="button">Delete them all!</a>
+        </div>
+
+    <div id="articles"></div>
+    <div id="notes"></div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+  <script src="../server.js"></script>
+
+</body>
+
+</html>
