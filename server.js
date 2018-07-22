@@ -1,3 +1,4 @@
+// require('dotenv').config()
 var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
@@ -30,6 +31,10 @@ app.use(express.static("public"));
 mongoose.connect("mongodb://localhost/week18Populater");
 
 // Routes
+
+var exphbs = require("express-handlebars");
+app.engine("handlebars", exphbs({ defaultLayout: 'main' }));
+app.set("view engine", "handlebars");
 
 // A GET route for scraping the echoJS website
 app.get("/scrape", function(req, res) {
